@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "co.axelrod.protobuf";
+option java_outer_classname = "GetWorkerDataProto";
+option objc_class_prefix = "GD";
+
+package co.axelrod.protobuf;
+
+// The greeting service definition.
+service GetWorkerData {
+  // Gets worker data
+  rpc GetWorkerData (GetWorkerDataRequest) returns (GetWorkerDataResponse) {}
+}
+
+// The request message containing the caller's name.
+message GetWorkerDataRequest {
+  string name = 1;
+}
+
+// The response message containing the worker data
+message GetWorkerDataResponse {
+  string message = 1;
+}

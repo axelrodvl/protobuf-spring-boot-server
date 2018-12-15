@@ -17,7 +17,7 @@ import java.util.Date;
 @CommonsLog
 @Component
 public class WorkerServer implements DisposableBean {
-    @Value("${environment.DOCKER_HOST}")
+    @Value("${environment.HOSTNAME}")
     private String hostName;
 
     private Server server;
